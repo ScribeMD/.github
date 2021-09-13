@@ -1,0 +1,5 @@
+{
+  "name": "Notify Assignee",
+  "description": "Send Slack notifications when pull requests are assigned.",
+  "iconName": "person-add-24"
+}

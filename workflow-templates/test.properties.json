@@ -1,0 +1,6 @@
+{
+  "name": "Test",
+  "description": "Run all pre-commit hooks.",
+  "iconName": "shield-check-24",
+  "filePatterns": ["^\\.pre-commit-config\\.yaml$"]
+}

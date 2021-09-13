@@ -1,0 +1,6 @@
+{
+  "name": "Bump Version",
+  "description": "Bump version, and update changelog with Commitizen.",
+  "iconName": "chevron-up-24",
+  "filePatterns": ["^CHANGELOG\\.md$"]
+}

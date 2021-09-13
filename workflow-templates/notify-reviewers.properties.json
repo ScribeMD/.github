@@ -1,0 +1,5 @@
+{
+  "name": "Notify Reviewers",
+  "description": "Send Slack notifications when reviewers are assigned to pull requests.",
+  "iconName": "code-review-24"
+}
