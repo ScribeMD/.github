@@ -70,10 +70,6 @@ repos:
   - repo: meta
     hooks:
       - id: check-useless-excludes
-  - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.18.1 # Keep in sync with pyproject.toml.
-    hooks:
-      - id: validate_manifest
 
   ## Python
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
