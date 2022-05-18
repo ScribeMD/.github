@@ -61,7 +61,7 @@
   confused with the Node.js-based
   [Commitizen](https://commitizen.github.io/cz-cli/). This helps to maintain a
   clear revision history. The
-  [bump-version](.github/workflows/bump-version.yaml) job automatically bumps
+  [Test](.github/workflows/test.yaml) workflow automatically bumps
   the project version in [`pyproject.toml`](pyproject.toml), appends to
   [`CHANGELOG.md`](CHANGELOG.md), and tags versions.
   You can either write
