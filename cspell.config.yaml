@@ -9,5 +9,6 @@ dictionaryDefinitions:
 dictionaries:
   - css
   - custom
+  - fullstack
   - npm
   - python
