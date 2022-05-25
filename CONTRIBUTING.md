@@ -43,6 +43,8 @@
 
 ## Expectations
 
+- If you are new to open source, welcome!
+  [Here is a guide to getting started.](https://opensource.guide/how-to-contribute/)
 - New features are generally very welcome.
 - For non-trivial issues, you may save yourself time by filing an issue first
   so we can discuss how best to address your proposal.
