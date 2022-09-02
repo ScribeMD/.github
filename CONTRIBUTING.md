@@ -28,15 +28,6 @@
 - Add the asdf plugin for all tools in [`.tool-versions`](.tool-versions) (e.g.,
   run `asdf plugin add nodejs` to install the Node.js plugin for asdf).
 - Run `asdf install` to install all asdf-managed tools at the pinned versions.
-- Add the following to the bottom of your `~/.bashrc`:
-
-  ```bash
-  for version in ~/.asdf/installs/poetry/*; do
-    source "$version/env"
-  done
-  ```
-
-- Close and relaunch Ubuntu to source your `~/.bashrc`.
 - Run `poetry install` to install all Python dependencies.
 - Run `poetry shell` to activate the Poetry virtual environment.
 - Install all pre-commit hooks by running `pre-commit install --install-hooks`.
