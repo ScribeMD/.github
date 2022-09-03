@@ -19,7 +19,7 @@
 
   ```bash
   source ~/.asdf/asdf.sh
-  source ~/.asdf/completions/asdf.bash
+  source "$ASDF_DIR/completions/asdf.bash"
   ```
 
 - Close and relaunch Ubuntu to source your `~/.bashrc`.
