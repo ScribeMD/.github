@@ -28,6 +28,8 @@
 - Add the asdf plugin for all tools in [`.tool-versions`](.tool-versions) (e.g.,
   run `asdf plugin add nodejs` to install the Node.js plugin for asdf).
 - Run `asdf install` to install all asdf-managed tools at the pinned versions.
+- Run `poetry env use "$(asdf which python)"` to instruct Poetry to use the
+  asdf-managed Python.
 - Run `poetry install --sync` to install all Python dependencies.
 - Run `poetry shell` to activate the Poetry virtual environment.
 - Install all pre-commit hooks by running `pre-commit install --install-hooks`.
