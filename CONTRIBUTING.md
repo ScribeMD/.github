@@ -33,6 +33,17 @@
 - Run `poetry install --sync` to install all Python dependencies.
 - Run `poetry shell` to activate the Poetry virtual environment.
 - Install all pre-commit hooks by running `pre-commit install --install-hooks`.
+- Create a `~/.ssh/config` file with the following contents:
+
+  ```ssh-config
+  Host github.com
+    AddKeysToAgent yes
+    # This may need to be modified to match the path to your private key.
+    IdentityFile ~/.ssh/id_ed25519
+    # Prevent GitHub from timing out pushes since we run intense pre-push hooks.
+    ServerAliveInterval 5
+    ServerAliveCountMax 360
+  ```
 
 ## Expectations
 
