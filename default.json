@@ -1,0 +1,183 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate config for ScribeMD in the style of Dependabot",
+  "extends": [
+    "config:base",
+    ":assignAndReview(Kurt-von-Laven)",
+    "helpers:disableTypesNodeMajor",
+    "npm:unpublishSafe"
+  ],
+  "addLabels": ["dependencies"],
+  "allowedPostUpgradeCommands": ["yarn run build"],
+  "commitBodyTable": true,
+  "commitMessageAction": "Bump",
+  "commitMessageTopic": "{{depName}} from {{#if isPinDigest}}{{{oldDigestShort}}}{{else}}{{#if isMajor}}{{prettyOldMajor}}{{else}}{{#if isSingleVersion}}{{prettyOldVersion}}{{else}}{{#if oldValue}}{{{oldValue}}}{{else}}{{{oldDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
+  "configWarningReuseIssue": false,
+  "dependencyDashboardApproval": true,
+  "dependencyDashboardLabels": ["dependencies"],
+  "dotnet": {
+    "addLabels": [".NET"]
+  },
+  "github-actions": {
+    "addLabels": ["github_actions"]
+  },
+  "js": {
+    "addLabels": ["javascript"]
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "pre-commit": {
+    "addLabels": ["pre-commit"],
+    "enabled": true
+  },
+  "python": {
+    "addLabels": ["python"]
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "semanticCommitScope": "deps-dev"
+    },
+    {
+      "matchManagers": ["yarn"],
+      "matchDepTypes": ["dependencies"],
+      "postUpgradeTasks": {
+        "commands": ["yarn run build"],
+        "fileFilters": ["*"],
+        "executionMode": "branch"
+      }
+    },
+    {
+      "matchPaths": ["action.yaml"],
+      "semanticCommitType": "fix"
+    }
+  ],
+  "platformCommit": true,
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 0,
+  "rangeStrategy": "bump",
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
+      "matchStrings": [
+        "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "actions/runner-images",
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^ubuntu(?<version>\\d+)\\/"
+    },
+    {
+      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
+      "matchStrings": [
+        "runs-on:\\s*['\"]?(?<depName>windows)-\\d+(?<currentValue>\\d{2})"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "actions/runner-images",
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^win(?<version>\\d+)\\/"
+    },
+    {
+      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
+      "matchStrings": [
+        "uses:\\s*['\"]?(?<depName>[^/]+\\/[^/]+).*@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": [
+        "^\\.pre-commit-config\\.yaml$",
+        "^\\.tool-versions$",
+        "^pyproject\\.toml$"
+      ],
+      "matchStrings": [
+        "(?<depName>python)\\s*(=\\s*\"^)?(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "python/cpython",
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": ["^\\.tool-versions$"],
+      "matchStrings": [
+        "(?<depName>poetry)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "python-poetry/poetry",
+      "depTypeTemplate": "engines"
+    },
+    {
+      "fileMatch": ["^\\.tool-versions$"],
+      "matchStrings": [
+        "(?<depName>yarn)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "yarnpkg/yarn",
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": ["^\\.tool-versions$"],
+      "matchStrings": [
+        "(?<depName>dotnet-core)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "dotnet/sdk",
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": ["^pyproject\\.toml$"],
+      "matchStrings": [
+        "(?<depName>poetry-core)>=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "pypi",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
+      "matchStrings": [
+        "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "MegaLinter",
+      "packageNameTemplate": "oxsecurity/megalinter-{{{flavor}}}",
+      "datasourceTemplate": "docker",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
+      "matchStrings": [
+        "(?<depName>mega-linter-runner)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.mega-linter\\.yaml$"],
+      "matchStrings": ["(?<depName>\\S+)@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.pre-commit-config\\.yaml$"],
+      "matchStrings": ["(?<depName>\\S+)==(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "datasourceTemplate": "pypi",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^action\\.yaml$"],
+      "matchStrings": [
+        "(?<depName>commitizen)_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "pypi",
+      "depTypeTemplate": "dependencies"
+    }
+  ],
+  "schedule": ["after 8am and before 12pm"],
+  "semanticCommitScope": "deps",
+  "timezone": "America/New_York"
+}
