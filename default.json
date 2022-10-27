@@ -168,7 +168,5 @@
       "depTypeTemplate": "dependencies"
     }
   ],
-  "schedule": ["after 8am and before 12pm"],
-  "semanticCommitScope": "deps",
-  "timezone": "America/New_York"
+  "semanticCommitScope": "deps"
 }
