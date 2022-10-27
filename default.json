@@ -8,7 +8,6 @@
     "npm:unpublishSafe"
   ],
   "addLabels": ["dependencies"],
-  "allowedPostUpgradeCommands": ["yarn run build"],
   "commitBodyTable": true,
   "commitMessageAction": "Bump",
   "commitMessageTopic": "{{depName}} from {{#if isPinDigest}}{{{currentDigestShort}}}{{else}}{{#if isSingleVersion}}v{{currentVersion}}{{else}}{{#if newValue}}{{{currentValue}}}{{else}}{{{currentDigestShort}}}{{/if}}{{/if}}{{/if}}",
@@ -39,15 +38,6 @@
     {
       "matchDepTypes": ["devDependencies"],
       "semanticCommitScope": "deps-dev"
-    },
-    {
-      "matchManagers": ["yarn"],
-      "matchDepTypes": ["dependencies"],
-      "postUpgradeTasks": {
-        "commands": ["yarn run build"],
-        "fileFilters": ["*"],
-        "executionMode": "branch"
-      }
     },
     {
       "matchPaths": ["action.yaml"],
