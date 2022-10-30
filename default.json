@@ -37,7 +37,6 @@
       "semanticCommitType": "fix"
     }
   ],
-  "platformCommit": true,
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 1,
   "prHourlyLimit": 0,
