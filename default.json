@@ -10,8 +10,8 @@
   "addLabels": ["dependencies"],
   "commitBodyTable": true,
   "commitMessageAction": "Bump",
-  "commitMessageTopic": "{{depName}} from {{#if isPinDigest}}{{{currentDigestShort}}}{{else}}{{#if isSingleVersion}}v{{currentVersion}}{{else}}{{#if newValue}}{{{currentValue}}}{{else}}{{{currentDigestShort}}}{{/if}}{{/if}}{{/if}}",
   "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}",
+  "commitMessageTopic": "{{depName}} from {{#if isPinDigest}}{{{currentDigestShort}}}{{else}}{{#if isSingleVersion}}v{{currentVersion}}{{else}}{{#if newValue}}{{{currentValue}}}{{else}}{{{currentDigestShort}}}{{/if}}{{/if}}{{/if}}",
   "configWarningReuseIssue": false,
   "dependencyDashboardApproval": true,
   "dependencyDashboardLabels": ["dependencies"],
@@ -27,13 +27,6 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "pre-commit": {
-    "addLabels": ["pre-commit"],
-    "enabled": true
-  },
-  "python": {
-    "addLabels": ["python"]
-  },
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
@@ -48,6 +41,13 @@
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 1,
   "prHourlyLimit": 0,
+  "pre-commit": {
+    "addLabels": ["pre-commit"],
+    "enabled": true
+  },
+  "python": {
+    "addLabels": ["python"]
+  },
   "rangeStrategy": "bump",
   "regexManagers": [
     {
