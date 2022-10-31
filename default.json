@@ -78,6 +78,14 @@
       "depTypeTemplate": "devDependencies"
     },
     {
+      "fileMatch": ["^action\\.yaml$"],
+      "matchStrings": [
+        "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "engines"
+    },
+    {
       "fileMatch": [
         "^\\.pre-commit-config\\.yaml$",
         "^\\.tool-versions$",
