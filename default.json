@@ -72,7 +72,7 @@
     {
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
       "matchStrings": [
-        "uses:\\s*['\"]?(?<depName>[^/]+\\/[^/]+).*@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "uses:\\s*['\"]?(?<depName>[^/]+\\/[^/]+)\\/\\.github\\/workflows\\/[^/]+\\.yaml@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "depTypeTemplate": "devDependencies"
