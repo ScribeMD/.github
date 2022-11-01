@@ -83,6 +83,7 @@
         "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
       ],
       "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "asdf-vm/asdf",
       "depTypeTemplate": "engines"
     },
     {
