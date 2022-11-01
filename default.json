@@ -70,14 +70,6 @@
       "extractVersionTemplate": "^win(?<version>\\d+)\\/"
     },
     {
-      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
-      "matchStrings": [
-        "uses:\\s*['\"]?(?<depName>[^/]+\\/[^/]+)\\/\\.github\\/workflows\\/[^/]+\\.yaml@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
-      "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "devDependencies"
-    },
-    {
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
         "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
