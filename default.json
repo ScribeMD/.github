@@ -33,6 +33,14 @@
       "semanticCommitScope": "deps-dev"
     },
     {
+      "matchPackageNames": ["commitizen", "commitizen-tools/commitizen"],
+      "groupName": "commitizen"
+    },
+    {
+      "matchPackagePatterns": ["mega-?linter"],
+      "groupName": "MegaLinter"
+    },
+    {
       "matchPaths": ["action.yaml"],
       "semanticCommitType": "fix"
     }
