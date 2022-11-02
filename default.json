@@ -80,7 +80,7 @@
     {
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
-        "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "asdf-vm/asdf",
@@ -93,7 +93,7 @@
         "^pyproject\\.toml$"
       ],
       "matchStrings": [
-        "(?<depName>python)\\s*(=\\s*\"^)?(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>python)\\s*(=\\s*\"^)?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python/cpython",
@@ -103,7 +103,7 @@
     {
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": [
-        "(?<depName>poetry)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>poetry)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python-poetry/poetry",
@@ -111,9 +111,7 @@
     },
     {
       "fileMatch": ["^\\.tool-versions$"],
-      "matchStrings": [
-        "(?<depName>yarn)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
+      "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "yarnpkg/yarn",
       "depTypeTemplate": "engines",
@@ -122,7 +120,7 @@
     {
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": [
-        "(?<depName>dotnet-core)\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>dotnet-core)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "dotnet/sdk",
@@ -132,7 +130,7 @@
     {
       "fileMatch": ["^pyproject\\.toml$"],
       "matchStrings": [
-        "(?<depName>poetry-core)>=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>poetry-core)>=(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "pypi",
       "depTypeTemplate": "devDependencies"
@@ -140,7 +138,7 @@
     {
       "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
       "matchStrings": [
-        "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+        "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v(\\d+\\.){2}\\d+)"
       ],
       "depNameTemplate": "MegaLinter",
       "packageNameTemplate": "oxsecurity/megalinter-{{{flavor}}}",
@@ -150,27 +148,27 @@
     {
       "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
       "matchStrings": [
-        "(?<depName>mega-linter-runner)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "npm",
       "depTypeTemplate": "devDependencies"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
-      "matchStrings": ["(?<depName>\\S+)@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "matchStrings": ["(?<depName>\\S+)@(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "npm",
       "depTypeTemplate": "devDependencies"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.pre-commit-config\\.yaml$"],
-      "matchStrings": ["(?<depName>\\S+)==(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "matchStrings": ["(?<depName>\\S+)==(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "pypi",
       "depTypeTemplate": "devDependencies"
     },
     {
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
-        "(?<depName>commitizen)_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?<depName>commitizen)_version:\\s*(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "pypi",
       "depTypeTemplate": "dependencies"
