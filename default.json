@@ -58,6 +58,14 @@
   "rangeStrategy": "bump",
   "regexManagers": [
     {
+      "fileMatch": ["^\\.github\\/renovate\\.json$"],
+      "matchStrings": [
+        "github>(?<depName>ScribeMD/.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "engines"
+    },
+    {
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
       "matchStrings": [
         "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
