@@ -101,7 +101,7 @@
         "^pyproject\\.toml$"
       ],
       "matchStrings": [
-        "(?<depName>python)\\s*(=\\s*\"^)?(?<currentValue>(\\d+\\.){2}\\d+)"
+        "(?<depName>python)\\s*(=\\s*\"\\^)?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python/cpython",
