@@ -4,8 +4,7 @@
   "extends": [
     "config:base",
     ":assignAndReview(Kurt-von-Laven)",
-    "helpers:disableTypesNodeMajor",
-    "npm:unpublishSafe"
+    "helpers:disableTypesNodeMajor"
   ],
   "addLabels": ["dependencies"],
   "commitBodyTable": true,
