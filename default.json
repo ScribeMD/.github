@@ -41,7 +41,7 @@
       "groupName": "MegaLinter"
     },
     {
-      "matchPaths": ["action.yaml", "mega-linter-runner"],
+      "matchPaths": [".pre-commit-hooks.yaml", "action.yaml"],
       "semanticCommitType": "fix"
     }
   ],
