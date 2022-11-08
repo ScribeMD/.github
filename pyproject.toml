@@ -6,6 +6,7 @@ build-backend = "poetry.core.masonry.api"
   [tool.commitizen]
   version = "0.7.2"
   version_files = ["pyproject.toml:version"]
+  major_version_zero = true
 
   [tool.poetry]
   name = "GitHub Starter Workflows"
