@@ -40,7 +40,7 @@
       "groupName": "MegaLinter"
     },
     {
-      "matchPaths": [".pre-commit-hooks.yaml", "action.yaml"],
+      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
       "semanticCommitType": "fix"
     }
   ],
