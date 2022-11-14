@@ -24,7 +24,8 @@
     "addLabels": ["javascript"]
   },
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "schedule": ["at any time"]
   },
   "packageRules": [
     {
