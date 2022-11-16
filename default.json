@@ -25,7 +25,7 @@
   },
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["at any time"]
+    "schedule": ["in 1970"]
   },
   "packageRules": [
     {
