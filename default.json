@@ -25,7 +25,7 @@
   },
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["in 1970"]
+    "schedule": ["on 29th of February in 1970"]
   },
   "packageRules": [
     {
