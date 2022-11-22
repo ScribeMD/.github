@@ -95,13 +95,9 @@
       "depTypeTemplate": "engines"
     },
     {
-      "fileMatch": [
-        "^\\.pre-commit-config\\.yaml$",
-        "^\\.tool-versions$",
-        "^pyproject\\.toml$"
-      ],
+      "fileMatch": ["^\\.pre-commit-config\\.yaml$", "^pyproject\\.toml$"],
       "matchStrings": [
-        "(?<depName>python)\\s*(=\\s*\"\\^)?(?<currentValue>(\\d+\\.){2}\\d+)"
+        "(?<depName>python)(\\s*=\\s*\"\\^)?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python/cpython",
