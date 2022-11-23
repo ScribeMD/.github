@@ -33,16 +33,16 @@
       "semanticCommitScope": "deps-dev"
     },
     {
+      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
+      "semanticCommitType": "fix"
+    },
+    {
       "matchPackageNames": ["commitizen", "commitizen-tools/commitizen"],
       "groupName": "commitizen"
     },
     {
       "matchPackagePatterns": ["[Mm]ega-?[Ll]inter"],
       "groupName": "MegaLinter"
-    },
-    {
-      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
-      "semanticCommitType": "fix"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
