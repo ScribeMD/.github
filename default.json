@@ -33,7 +33,7 @@
       "semanticCommitScope": "deps-dev"
     },
     {
-      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
+      "matchFiles": ["action.yaml"],
       "semanticCommitType": "fix"
     },
     {
@@ -155,7 +155,7 @@
         "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "npm",
-      "depTypeTemplate": "devDependencies"
+      "depTypeTemplate": "dependencies"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
