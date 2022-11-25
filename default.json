@@ -39,10 +39,6 @@
     {
       "matchPackageNames": ["commitizen", "commitizen-tools/commitizen"],
       "groupName": "commitizen"
-    },
-    {
-      "matchPackagePatterns": ["[Mm]ega-?[Ll]inter"],
-      "groupName": "MegaLinter"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
