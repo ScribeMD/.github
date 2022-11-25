@@ -43,6 +43,7 @@
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 1,
+  "prCreation": "approval",
   "prHourlyLimit": 0,
   "pre-commit": {
     "addLabels": ["pre-commit"],
