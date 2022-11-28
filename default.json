@@ -52,7 +52,7 @@
   "python": {
     "addLabels": ["python"]
   },
-  "rangeStrategy": "bump",
+  "rangeStrategy": "pin",
   "regexManagers": [
     {
       "fileMatch": ["^\\.github\\/renovate\\.json$"],
