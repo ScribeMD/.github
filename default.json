@@ -39,6 +39,10 @@
     {
       "matchPackageNames": ["commitizen", "commitizen-tools/commitizen"],
       "groupName": "commitizen"
+    },
+    {
+      "matchPackageNames": ["pre-commit", "pre-commit/pre-commit"],
+      "groupName": "pre-commit"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
