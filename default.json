@@ -60,7 +60,7 @@
     {
       "fileMatch": ["^\\.github\\/renovate\\.json$"],
       "matchStrings": [
-        "github>(?<depName>ScribeMD/.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
+        "github>(?<depName>ScribeMD/\\.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines"
