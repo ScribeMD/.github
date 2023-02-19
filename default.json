@@ -159,6 +159,14 @@
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
+      "matchStrings": [
+        "https://raw\\.githubusercontent\\.com/(?<depName>ScribeMD/\\.github)/(?<currentValue>(\\d+\\.){2}\\d+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.mega-linter\\.yaml$"],
       "matchStrings": ["(?<depName>\\S+)@(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "npm",
       "depTypeTemplate": "devDependencies"
