@@ -70,8 +70,8 @@
       "matchStrings": [
         "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "actions/runner-images",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^ubuntu(?<version>\\d+)\\/"
     },
@@ -80,8 +80,8 @@
       "matchStrings": [
         "runs-on:\\s*['\"]?(?<depName>windows)-\\d+(?<currentValue>\\d{2})"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "actions/runner-images",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^win(?<version>\\d+)\\/"
     },
@@ -90,8 +90,8 @@
       "matchStrings": [
         "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "asdf-vm/asdf",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines"
     },
     {
@@ -99,8 +99,8 @@
       "matchStrings": [
         "(?<depName>python)(\\s*=\\s*\"==)?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python/cpython",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
@@ -109,15 +109,15 @@
       "matchStrings": [
         "(?<depName>poetry)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "python-poetry/poetry",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines"
     },
     {
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "yarnpkg/yarn",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
@@ -126,8 +126,8 @@
       "matchStrings": [
         "(?<depName>dotnet-core)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
       "packageNameTemplate": "dotnet/sdk",
+      "datasourceTemplate": "github-tags",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
