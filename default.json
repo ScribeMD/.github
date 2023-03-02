@@ -88,11 +88,12 @@
     {
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
-        "(?<depName>asdf)(-|_branch:\\s*)(?<currentValue>v(\\d+\\.){2}\\d+)"
+        "(?<depName>asdf)(-|_branch:\\s*)v(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "packageNameTemplate": "asdf-vm/asdf",
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines"
+      "depTypeTemplate": "engines",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
       "fileMatch": ["^\\.pre-commit-config\\.yaml$", "^pyproject\\.toml$"],
