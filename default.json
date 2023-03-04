@@ -37,12 +37,20 @@
       "semanticCommitType": "fix"
     },
     {
+      "matchPackageNames": ["autopep8", "pre-commit/mirrors-autopep8"],
+      "groupName": "autopep8"
+    },
+    {
       "matchPackageNames": ["commitizen", "commitizen-tools/commitizen"],
       "groupName": "commitizen"
     },
     {
       "matchPackageNames": ["pre-commit", "pre-commit/pre-commit"],
       "groupName": "pre-commit"
+    },
+    {
+      "matchPackageNames": ["pydocstyle", "PyCQA/pydocstyle"],
+      "groupName": "pydocstyle"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
