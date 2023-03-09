@@ -50,6 +50,7 @@
         "black",
         "flake8",
         "isort",
+        "MegaLinter",
         "mypy",
         "oxsecurity/megalinter-python",
         "pylint"
