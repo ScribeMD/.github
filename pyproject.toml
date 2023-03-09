@@ -4,13 +4,13 @@ build-backend = "poetry.core.masonry.api"
 
 [tool]
   [tool.commitizen]
-  version = "0.9.4"
+  version = "0.9.5"
   version_files = ["pyproject.toml:version"]
   major_version_zero = true
 
   [tool.poetry]
   name = "GitHub Starter Workflows"
-  version = "0.9.4"
+  version = "0.9.5"
   description = "GitHub Actions Starter Workflows and Default Community Health Files"
   authors = ["Kurt von Laven <kurt.von.laven@gmail.com>"]
   license = "MIT"
