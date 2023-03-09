@@ -208,5 +208,6 @@
       "depTypeTemplate": "dependencies"
     }
   ],
-  "semanticCommitScope": "deps"
+  "semanticCommitScope": "deps",
+  "separateMajorMinor": false
 }
