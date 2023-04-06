@@ -48,22 +48,17 @@
       "matchPackageNames": [
         "bandit",
         "black",
-        "flake8",
-        "isort",
         "MegaLinter",
         "mypy",
         "oxsecurity/megalinter-python",
-        "pylint"
+        "pylint",
+        "ruff"
       ],
       "groupName": "MegaLinter"
     },
     {
       "matchPackageNames": ["pre-commit", "pre-commit/pre-commit"],
       "groupName": "pre-commit"
-    },
-    {
-      "matchPackageNames": ["pydocstyle", "PyCQA/pydocstyle"],
-      "groupName": "pydocstyle"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
