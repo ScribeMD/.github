@@ -24,6 +24,8 @@
 
 - Close and relaunch Ubuntu to source your `~/.bashrc`.
 - [Install Python's build dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment).
+- If `.tool-versions` contains `ruby`,
+  [install Ruby's build dependencies](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment).
 - Change directories to the root of this repository.
 - Add the asdf plugin for all tools in [`.tool-versions`](.tool-versions) (e.g.,
   run `asdf plugin add nodejs` to install the Node.js plugin for asdf).
