@@ -123,15 +123,6 @@
     },
     {
       "fileMatch": ["^\\.tool-versions$"],
-      "matchStrings": [
-        "(?<depName>poetry)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
-      ],
-      "packageNameTemplate": "python-poetry/poetry",
-      "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines"
-    },
-    {
-      "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
       "packageNameTemplate": "yarnpkg/yarn",
       "datasourceTemplate": "github-tags",
