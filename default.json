@@ -166,12 +166,13 @@
       "depTypeTemplate": "dependencies"
     },
     {
-      "fileMatch": ["^\\.mega-linter\\.yaml$"],
+      "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.yarnrc\\.yml$"],
       "matchStrings": [
-        "https://raw\\.githubusercontent\\.com/(?<depName>ScribeMD/\\.github)/(?<currentValue>(\\d+\\.){2}\\d+)"
+        "https://raw\\.githubusercontent\\.com/(?<depName>[^/]+/[^/]+)/v?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "devDependencies"
+      "depTypeTemplate": "devDependencies",
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
