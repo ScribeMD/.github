@@ -8,6 +8,7 @@ DISABLE_LINTERS:
   - GRAPHQL_GRAPHQL_SCHEMA_LINTER
   - PYTHON_FLAKE8 # Superseded by Ruff
   - PYTHON_ISORT # Superseded by Ruff
+  - TYPESCRIPT_STANDARD # We use Prettier instead.
 FAIL_IF_MISSING_LINTER_IN_FLAVOR: true
 FILTER_REGEX_EXCLUDE: \.pnp\.(c|loader\.m)js|\.yarn|dist
 FORMATTERS_DISABLE_ERRORS: false
