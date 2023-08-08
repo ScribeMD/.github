@@ -4,6 +4,7 @@ DEFAULT_BRANCH: main
 DISABLE_LINTERS:
   - CSHARP_DOTNET_FORMAT # Superseded by CSharpier
   - GRAPHQL_GRAPHQL_SCHEMA_LINTER # We have .graphql queries, not schemas.
+  - MARKDOWN_MARKDOWN_LINK_CHECK # Superseded by Lychee
   - PYTHON_FLAKE8 # Superseded by Ruff
   - PYTHON_ISORT # Superseded by Ruff
   - TYPESCRIPT_STANDARD # We use Prettier instead.
