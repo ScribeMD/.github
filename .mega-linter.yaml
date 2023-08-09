@@ -1,2 +1,1 @@
 EXTENDS: .github/base.mega-linter.yaml
-MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.yaml
