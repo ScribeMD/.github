@@ -1,5 +1,3 @@
 exclude_mail = true
-
 exclude_path = ["default.json"]
-
 max_retries = 4
