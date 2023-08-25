@@ -177,10 +177,9 @@
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
       "matchStrings": ["(?<depName>yarn)-(?<currentValue>(\\d+\\.){2}\\d+)"],
-      "packageNameTemplate": "yarnpkg/berry",
-      "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines",
-      "extractVersionTemplate": "^@yarnpkg/cli/(?<version>.*)$"
+      "packageNameTemplate": "@yarnpkg/cli",
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "engines"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
