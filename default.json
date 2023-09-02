@@ -3,7 +3,8 @@
   "description": "Renovate config for ScribeMD in the style of Dependabot",
   "extends": [
     "config:base",
-    ":assignAndReview(ScribeMD/dependency-management)",
+    ":assignee(Kurt-von-Laven)",
+    ":reviewer(ScribeMD/dependency-management)",
     "helpers:disableTypesNodeMajor"
   ],
   "addLabels": ["dependencies"],
