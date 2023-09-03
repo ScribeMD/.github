@@ -4,7 +4,7 @@
   "extends": [
     "config:base",
     ":assignee(Kurt-von-Laven)",
-    ":reviewer(ScribeMD/dependency-management)",
+    ":reviewer(team:dependency-management)",
     "helpers:disableTypesNodeMajor"
   ],
   "addLabels": ["dependencies"],
