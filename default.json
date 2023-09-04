@@ -38,7 +38,7 @@
       "semanticCommitType": "fix"
     },
     {
-      "matchPackageNames": ["autopep8", "pre-commit/mirrors-autopep8"],
+      "matchPackageNames": ["autopep8", "hhatto/autopep8"],
       "groupName": "autopep8"
     },
     {
