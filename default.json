@@ -195,6 +195,14 @@
       "depTypeTemplate": "devDependencies"
     },
     {
+      "fileMatch": ["^\\.yarn/sdks/[^/]+/package\\.json$"],
+      "matchStrings": [
+        "\"name\":\\s*\"(?<depName>[^\"]+)\",\\s*\"version\":\\s*\"(?<currentValue>(\\d+\\.){2}\\d+)-sdk\""
+      ],
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
         "(?<depName>commitizen)_version:\\s*(?<currentValue>(\\d+\\.){2}\\d+)"
