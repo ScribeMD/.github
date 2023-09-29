@@ -50,11 +50,14 @@
         "bandit",
         "black",
         "MegaLinter",
+        "mega-linter-runner",
         "mypy",
-        "oxsecurity/megalinter-python",
+        "prettier",
         "pylint",
-        "ruff"
+        "ruff",
+        "ScribeMD/pre-commit-hooks"
       ],
+      "matchPackagePrefixes": ["oxsecurity/megalinter"],
       "groupName": "MegaLinter"
     },
     {
