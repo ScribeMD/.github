@@ -30,7 +30,7 @@
   },
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["dev-dependencies", "devDependencies"],
       "semanticCommitScope": "deps-dev"
     },
     {
@@ -149,7 +149,7 @@
         "(?<depName>poetry-core)>=(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "pypi",
-      "depTypeTemplate": "devDependencies"
+      "depTypeTemplate": "dev-dependencies"
     },
     {
       "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
@@ -183,7 +183,7 @@
       "matchStrings": ["(?<depName>yarn)-(?<currentValue>(\\d+\\.){2}\\d+)"],
       "packageNameTemplate": "@yarnpkg/cli",
       "datasourceTemplate": "npm",
-      "depTypeTemplate": "engines"
+      "depTypeTemplate": "packageManager"
     },
     {
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
@@ -195,7 +195,7 @@
       "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.pre-commit-config\\.yaml$"],
       "matchStrings": ["(?<depName>\\S+)==(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "pypi",
-      "depTypeTemplate": "devDependencies"
+      "depTypeTemplate": "dev-dependencies"
     },
     {
       "fileMatch": ["^\\.yarn/sdks/[^/]+/package\\.json$"],
