@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config for ScribeMD in the style of Dependabot",
   "extends": [
-    "config:base",
+    "config:best-practices",
     ":assignee(Kurt-von-Laven)",
     ":reviewer(team:dependency-management)",
     "helpers:disableTypesNodeMajor",
