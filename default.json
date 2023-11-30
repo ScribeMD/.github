@@ -77,8 +77,9 @@
     "addLabels": ["python"]
   },
   "rangeStrategy": "pin",
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^\\.github\\/renovate\\.json$"],
       "matchStrings": [
         "github>(?<depName>ScribeMD/\\.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -87,6 +88,7 @@
       "depTypeTemplate": "engines"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
       "matchStrings": [
         "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
@@ -97,6 +99,7 @@
       "extractVersionTemplate": "^ubuntu(?<version>\\d+)\\/"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
       "matchStrings": [
         "runs-on:\\s*['\"]?(?<depName>windows)-\\d+(?<currentValue>\\d{2})"
@@ -107,6 +110,7 @@
       "extractVersionTemplate": "^win(?<version>\\d+)\\/"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
         "(?<depName>asdf)(-|_branch:\\s*)v(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -117,6 +121,7 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.pre-commit-config\\.yaml$", "^pyproject\\.toml$"],
       "matchStrings": [
         "(?<depName>python)(\\s*=\\s*\"==)?(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -127,6 +132,7 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
       "packageNameTemplate": "yarnpkg/yarn",
@@ -135,6 +141,7 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": [
         "(?<depName>dotnet-core)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -145,6 +152,7 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^pyproject\\.toml$"],
       "matchStrings": [
         "(?<depName>poetry-core)>=(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -153,6 +161,7 @@
       "depTypeTemplate": "dev-dependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
       "matchStrings": [
         "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v(\\d+\\.){2}\\d+)"
@@ -163,6 +172,7 @@
       "depTypeTemplate": "devDependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
       "matchStrings": [
         "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -171,6 +181,7 @@
       "depTypeTemplate": "dependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.yarnrc\\.yml$"],
       "matchStrings": [
         "https://raw\\.githubusercontent\\.com/(?<depName>[^/]+/[^/]+)/v?(?<currentValue>(\\d+\\.){2}\\d+)"
@@ -180,6 +191,7 @@
       "extractVersionTemplate": "^v?(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
       "matchStrings": ["(?<depName>yarn)-(?<currentValue>(\\d+\\.){2}\\d+)"],
       "packageNameTemplate": "@yarnpkg/cli",
@@ -187,18 +199,21 @@
       "depTypeTemplate": "packageManager"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.mega-linter\\.yaml$"],
       "matchStrings": ["(?<depName>\\S+)@(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "npm",
       "depTypeTemplate": "devDependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.mega-linter\\.yaml$", "^\\.pre-commit-config\\.yaml$"],
       "matchStrings": ["(?<depName>\\S+)==(?<currentValue>(\\d+\\.){2}\\d+)"],
       "datasourceTemplate": "pypi",
       "depTypeTemplate": "dev-dependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^\\.yarn/sdks/[^/]+/package\\.json$"],
       "matchStrings": [
         "\"name\":\\s*\"(?<depName>[^\"]+)\",\\s*\"version\":\\s*\"(?<currentValue>(\\d+\\.){2}\\d+)-sdk\""
@@ -207,6 +222,7 @@
       "depTypeTemplate": "devDependencies"
     },
     {
+      "customType": "regex",
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
         "(?<depName>commitizen)_version:\\s*(?<currentValue>(\\d+\\.){2}\\d+)"
