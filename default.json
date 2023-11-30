@@ -5,7 +5,8 @@
     "config:base",
     ":assignee(Kurt-von-Laven)",
     ":reviewer(team:dependency-management)",
-    "helpers:disableTypesNodeMajor"
+    "helpers:disableTypesNodeMajor",
+    "mergeConfidence:all-badges"
   ],
   "addLabels": ["dependencies"],
   "commitBodyTable": true,
