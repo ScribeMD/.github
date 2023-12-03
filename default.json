@@ -147,8 +147,8 @@
       "customType": "regex",
       "fileMatch": ["^\\.tool-versions$"],
       "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
-      "packageNameTemplate": "yarnpkg/yarn",
-      "datasourceTemplate": "github-tags",
+      "packageNameTemplate": "yarn",
+      "datasourceTemplate": "npm",
       "depTypeTemplate": "packageManager",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
