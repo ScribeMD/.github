@@ -35,6 +35,14 @@
       "semanticCommitScope": "deps-dev"
     },
     {
+      "matchDepTypes": ["engines"],
+      "semanticCommitScope": "engines"
+    },
+    {
+      "matchDepTypes": ["packageManager"],
+      "semanticCommitScope": "pkg-manager"
+    },
+    {
       "matchFiles": ["action.yaml"],
       "semanticCommitType": "fix"
     },
