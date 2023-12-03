@@ -31,6 +31,10 @@
   },
   "packageRules": [
     {
+      "matchDepTypes": ["config"],
+      "semanticCommitScope": "config"
+    },
+    {
       "matchDepTypes": ["dev-dependencies", "devDependencies"],
       "semanticCommitScope": "deps-dev"
     },
@@ -93,7 +97,7 @@
         "github>(?<depName>ScribeMD/\\.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines"
+      "depTypeTemplate": "config"
     },
     {
       "customType": "regex",
@@ -125,7 +129,7 @@
       ],
       "packageNameTemplate": "asdf-vm/asdf",
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines",
+      "depTypeTemplate": "packageManager",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
@@ -145,7 +149,7 @@
       "matchStrings": ["(?<depName>yarn)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"],
       "packageNameTemplate": "yarnpkg/yarn",
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines",
+      "depTypeTemplate": "packageManager",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
@@ -195,7 +199,7 @@
         "https://raw\\.githubusercontent\\.com/(?<depName>[^/]+/[^/]+)/v?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "devDependencies",
+      "depTypeTemplate": "config",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     },
     {
