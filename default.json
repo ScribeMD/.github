@@ -62,7 +62,6 @@
       "matchPackageNames": [
         "bandit",
         "black",
-        "MegaLinter",
         "mega-linter-runner",
         "mypy",
         "prettier",
