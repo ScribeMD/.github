@@ -159,7 +159,7 @@
       ],
       "packageNameTemplate": "dotnet/sdk",
       "datasourceTemplate": "github-tags",
-      "depTypeTemplate": "engines",
+      "depTypeTemplate": "devDependencies",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
