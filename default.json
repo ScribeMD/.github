@@ -47,7 +47,7 @@
       "semanticCommitScope": "pkg-manager"
     },
     {
-      "matchFiles": ["action.yaml"],
+      "matchFileNames": ["action.yaml"],
       "semanticCommitType": "fix"
     },
     {
