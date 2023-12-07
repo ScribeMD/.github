@@ -95,7 +95,7 @@
       "matchStrings": [
         "github>(?<depName>ScribeMD/\\.github)#(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depTypeTemplate": "config"
     },
     {
@@ -105,7 +105,7 @@
         "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
       ],
       "packageNameTemplate": "actions/runner-images",
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^ubuntu(?<version>\\d+)\\/"
     },
@@ -116,7 +116,7 @@
         "runs-on:\\s*['\"]?(?<depName>windows)-\\d+(?<currentValue>\\d{2})"
       ],
       "packageNameTemplate": "actions/runner-images",
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depTypeTemplate": "engines",
       "extractVersionTemplate": "^win(?<version>\\d+)\\/"
     },
@@ -127,7 +127,7 @@
         "(?<depName>asdf)(-|_branch:\\s*)v(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "packageNameTemplate": "asdf-vm/asdf",
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depTypeTemplate": "packageManager",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
@@ -157,7 +157,7 @@
         "(?<depName>dotnet-core)\\s+(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
       "packageNameTemplate": "dotnet/sdk",
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "depTypeTemplate": "devDependencies",
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
@@ -196,7 +196,7 @@
       "matchStrings": [
         "https://raw\\.githubusercontent\\.com/(?<depName>[^/]+/[^/]+)/v?(?<currentValue>(\\d+\\.){2}\\d+)"
       ],
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-{{#if (equals depName 'ScribeMD/.github')}}releases{{else}}tags{{/if}}",
       "depTypeTemplate": "config",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     },
