@@ -100,28 +100,6 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
-      "matchStrings": [
-        "runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>\\d+)\\.04"
-      ],
-      "packageNameTemplate": "actions/runner-images",
-      "datasourceTemplate": "github-releases",
-      "depTypeTemplate": "engines",
-      "extractVersionTemplate": "^ubuntu(?<version>\\d+)\\/"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.yaml$"],
-      "matchStrings": [
-        "runs-on:\\s*['\"]?(?<depName>windows)-\\d+(?<currentValue>\\d{2})"
-      ],
-      "packageNameTemplate": "actions/runner-images",
-      "datasourceTemplate": "github-releases",
-      "depTypeTemplate": "engines",
-      "extractVersionTemplate": "^win(?<version>\\d+)\\/"
-    },
-    {
-      "customType": "regex",
       "fileMatch": ["^action\\.yaml$"],
       "matchStrings": [
         "(?<depName>asdf)(-|_branch:\\s*)v(?<currentValue>(\\d+\\.){2}\\d+)"
