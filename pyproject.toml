@@ -9,7 +9,7 @@ build-backend = "poetry.core.masonry.api"
 
   [tool.poetry]
   name = "GitHub Starter Workflows"
-  version = "0.14.10"
+  version = "0.14.11"
   description = "GitHub Actions Starter Workflows and Default Community Health Files"
   authors = ["Kurt von Laven <kurt.von.laven@gmail.com>"]
   license = "MIT"
