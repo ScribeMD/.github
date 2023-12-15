@@ -31,6 +31,10 @@
   },
   "packageRules": [
     {
+      "matchDatasources": ["docker"],
+      "pinDigests": false
+    },
+    {
       "matchDepTypes": ["config"],
       "semanticCommitScope": "config"
     },
