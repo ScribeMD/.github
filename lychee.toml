@@ -1,3 +1,5 @@
+# See https://github.com/lycheeverse/lychee/issues/1157.
+exclude = ["^https://stackoverflow\\.com"]
 exclude_mail = true
 exclude_path = ["default.json"]
 max_retries = 4
